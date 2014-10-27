@@ -12,7 +12,7 @@ appropriately.
 Then link this file into `/var/discourse/containers` and rebuild the app.
 
 ```bash
-sudo ln -s speakup.yml /var/discourse/containers/speakup.yml
+sudo ln -s `pwd`/speakup.yml /var/discourse/containers/
 cd /var/discourse
 sudo ./launcher rebuild speakup
 ```
