@@ -77,7 +77,7 @@ hooks:
           - mkdir -p plugins
           - git clone https://github.com/discourse/docker_manager.git
           - git clone https://github.com/davidcelis/new_relic-discourse.git
-          - git clone https://github.com/Code4SA/discourse-embed-by-topic-id.git
+          - git clone https://github.com/Code4SA/speakup-discourse-plugin.git
   after_web_config:
     - replace:
         filename: /etc/nginx/nginx.conf
