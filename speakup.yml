@@ -57,6 +57,10 @@ env:
   # New Relic as per https://github.com/davidcelis/new_relic-discourse
   NEW_RELIC_LICENSE_KEY: XXXXXXX
   NEW_RELIC_APP_NAME: Speak Up Discourse
+  #
+  # Mailchimp integration
+  MAILCHIMP_API_KEY:
+  MAILCHIMP_LIST_ID:
 
 ## These containers are stateless, all data is stored in /shared
 volumes:

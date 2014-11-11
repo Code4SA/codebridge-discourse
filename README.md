@@ -4,10 +4,14 @@ Speak Up Mzansi! Discourse Configuration
 This repo stores the speakupmzansi.org.za Discourse configuration. It is expected to be used
 with a [https://github.com/discourse/discourse/blob/master/docs/INSTALL-digital-ocean.md](Discourse Docker Image).
 
-To use it, first setup a Docker-based Discourse instance and clone this repo into a directory somewhere.
+To use it, first setup a Docker-based Discourse instance and clone this repo into a directory somewhere (such as `~/speakup-discourse`).
 
-Edit speakup.yml and set the `DISCOURSE_SMTP_PASSWORD` and `NEW_RELIC_LICENSE_KEY` variables
-appropriately.
+Edit `speakup.yml` and set these env variables appropriately:
+
+- `DISCOURSE_SMTP_PASSWORD` - password/api key for Mandrill
+- `NEW_RELIC_LICENSE_KEY` - new relic license key string
+- `MAILCHIMP_API_KEY` - API key for mailchimp integration
+- `MAILCHIMP_LIST_ID` - ID of the list to subscribe new users to
 
 Then link this file into `/var/discourse/containers` and rebuild the app.
 
