@@ -2,7 +2,7 @@ Speak Up Mzansi! Discourse Configuration
 ========================================
 
 This repo stores the speakupmzansi.org.za Discourse configuration. It is expected to be used
-with a [https://github.com/discourse/discourse/blob/master/docs/INSTALL-digital-ocean.md](Discourse Docker Image).
+with a [Discourse Docker Image](https://github.com/discourse/discourse/blob/master/docs/INSTALL-cloud.md).
 
 To use it, first setup a Docker-based Discourse instance and clone this repo into a directory somewhere (such as `~/speakup-discourse`).
 
