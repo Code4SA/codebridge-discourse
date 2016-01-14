@@ -20,13 +20,3 @@ sudo ln -s `pwd`/speakup.yml /var/discourse/containers/
 cd /var/discourse
 sudo ./launcher rebuild speakup
 ```
-
-Domains
--------
-
-Speak Up Mzansi has a primary domain of speakupmzansi.org.za and also supports
-these domains (which will redirect to the primary domain):
-
-* speakup.org.za
-* speakupmzansi.co.za
-* speakupmzansi.org

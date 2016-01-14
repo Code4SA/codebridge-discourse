@@ -43,7 +43,7 @@ env:
   DISCOURSE_DEVELOPER_EMAILS: 'greg@code4sa.org'
   ##
   ## TODO: The domain name this Discourse instance will respond to
-  DISCOURSE_HOSTNAME: 'speakupmzansi.org.za'
+  DISCOURSE_HOSTNAME: 'forums.speakupmzansi.org.za'
   ##
   ## TODO: The mailserver this Discourse instance will use
   DISCOURSE_SMTP_ADDRESS: smtp.mandrillapp.com
@@ -89,15 +89,6 @@ hooks:
         to: |
           server_names_hash_bucket_size 64;
           sendfile on;
-    - file:
-        # server name aliases
-        path: /etc/nginx/conf.d/discourse_redirect.conf
-        contents: |
-          server {
-            listen 80;
-            server_name www.speakupmzansi.org.za .speakupmzansi.co.za .speakupmzansi.org .speakup.org.za;
-            return 301 $scheme://speakupmzansi.org.za$request_uri;
-          }
 
 ## Remember, this is YAML syntax - you can only have one block with a name
 run:
