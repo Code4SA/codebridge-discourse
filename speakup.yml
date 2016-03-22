@@ -46,9 +46,9 @@ env:
   DISCOURSE_HOSTNAME: 'forums.speakupmzansi.org.za'
   ##
   ## TODO: The mailserver this Discourse instance will use
-  DISCOURSE_SMTP_ADDRESS: smtp.mandrillapp.com
+  DISCOURSE_SMTP_ADDRESS: smtp.sendgrid.net
   DISCOURSE_SMTP_PORT: 587                        # (optional)
-  DISCOURSE_SMTP_USER_NAME: greg@code4sa.org
+  DISCOURSE_SMTP_USER_NAME: XXXXXX
   DISCOURSE_SMTP_PASSWORD: XXXXXXX
   ##
   ## The CDN address for this Discourse instance (configured to pull)
