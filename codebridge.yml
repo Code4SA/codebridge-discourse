@@ -43,7 +43,7 @@ env:
   DISCOURSE_DEVELOPER_EMAILS: 'greg@code4sa.org'
   ##
   ## TODO: The domain name this Discourse instance will respond to
-  DISCOURSE_HOSTNAME: 'forums.speakupmzansi.org.za'
+  DISCOURSE_HOSTNAME: 'discuss.codebridge.org.za'
   ##
   ## TODO: The mailserver this Discourse instance will use
   DISCOURSE_SMTP_ADDRESS: smtp.sendgrid.net
@@ -56,7 +56,7 @@ env:
   #
   # New Relic as per https://github.com/davidcelis/new_relic-discourse
   NEW_RELIC_LICENSE_KEY: XXXXXXX
-  NEW_RELIC_APP_NAME: Speak Up Discourse
+  NEW_RELIC_APP_NAME: CodeBridge Discourse
   #
   # Mailchimp integration
   MAILCHIMP_API_KEY:
@@ -81,7 +81,6 @@ hooks:
           - mkdir -p plugins
           - git clone https://github.com/discourse/docker_manager.git
           - git clone https://github.com/davidcelis/new_relic-discourse.git
-          - git clone https://github.com/Code4SA/speakup-discourse-plugin.git
   after_web_config:
     - replace:
         filename: /etc/nginx/nginx.conf
