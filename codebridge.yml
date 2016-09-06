@@ -20,7 +20,7 @@ templates:
 
 ## which TCP/IP ports should this container expose?
 expose:
-  - "80:80"   # fwd host port 80   to container port 80 (http)
+  - "8001:80"   # fwd host port 80   to container port 80 (http)
   - "2222:22" # fwd host port 2222 to container port 22 (ssh)
 
 params:
@@ -40,7 +40,7 @@ env:
   ##
   ## TODO: List of comma delimited emails that will be made admin and developer
   ## on initial signup example 'user1@example.com,user2@example.com'
-  DISCOURSE_DEVELOPER_EMAILS: 'greg@code4sa.org'
+  DISCOURSE_DEVELOPER_EMAILS: 'greg@code4sa.org,jd@code4sa.org'
   ##
   ## TODO: The domain name this Discourse instance will respond to
   DISCOURSE_HOSTNAME: 'discuss.codebridge.org.za'
@@ -65,10 +65,10 @@ env:
 ## These containers are stateless, all data is stored in /shared
 volumes:
   - volume:
-      host: /var/discourse/shared/standalone
+      host: /var/discourse/shared/codebridge
       guest: /shared
   - volume:
-      host: /var/discourse/shared/standalone/log/var-log
+      host: /var/discourse/shared/codebridge/log/var-log
       guest: /var/log
 
 ## The docker manager plugin allows you to one-click upgrade Discouse
