@@ -6,15 +6,20 @@ with a [Discourse Docker Image](https://github.com/discourse/discourse/blob/mast
 
 To use it, first setup a Docker-based Discourse instance and clone this repo into a directory somewhere (such as `~/codebridge-discourse`).
 
-Edit `speakup.yml` and set these env variables appropriately:
+Edit `codebridge.yml` and set these env variables appropriately:
 
-- `DISCOURSE_SMTP_PASSWORD` - password/api key for Mandrill
+- `DISCOURSE_SMTP_PASSWORD` - password and user
 - `NEW_RELIC_LICENSE_KEY` - new relic license key string
 
 Then link this file into `/var/discourse/containers` and rebuild the app.
 
 ```bash
+sudo cp nginx.conf /etc/nginx/conf.d/discuss-codebridge.conf
 sudo ln -s `pwd`/codebridge.yml /var/discourse/containers/
 cd /var/discourse
 sudo ./launcher rebuild codebridge
+```
+
+Ensure the server is reachable on port 80 for its hostname:
+
 ```
