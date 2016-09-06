@@ -15,6 +15,7 @@ Then link this file into `/var/discourse/containers` and rebuild the app.
 
 ```bash
 sudo cp nginx.conf /etc/nginx/conf.d/discuss-codebridge.conf
+sudo /etc/init.d/nginx configtest && sudo /etc/init.d/nginx reload
 sudo ln -s `pwd`/codebridge.yml /var/discourse/containers/
 cd /var/discourse
 sudo ./launcher rebuild codebridge
